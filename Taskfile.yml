@@ -60,3 +60,8 @@ tasks:
     desc: Show private ADR reminder
     cmds:
       - ./Scripts/adr-note.sh
+
+  configs:save:
+    desc: Save live configs into repo
+    cmds:
+      - ./Scripts/save-live-configs.sh
