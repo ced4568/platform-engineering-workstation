@@ -35,3 +35,18 @@ tasks:
     desc: Run full workstation bootstrap
     cmds:
       - ./bootstrap.sh
+
+  dotfiles:backup:
+    desc: Back up local workstation configs
+    cmds:
+      - ./Scripts/backup-configs.sh
+
+  project:new:
+    desc: Create a new project
+    cmds:
+      - ./Scripts/new-project.sh {{.CLI_ARGS}}
+
+  open:
+    desc: Open common workstation projects
+    cmds:
+      - ./Scripts/open-workstation.sh
