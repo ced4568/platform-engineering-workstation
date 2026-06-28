@@ -12,10 +12,12 @@ echo "========================================"
 ./Bootstrap/bash.sh
 ./Bootstrap/ssh.sh
 ./Bootstrap/alacritty.sh
+./Bootstrap/tmux.sh
 ./Bootstrap/docker.sh
 ./Bootstrap/kubernetes.sh
 ./Bootstrap/github.sh
 ./Bootstrap/vscode.sh
+./Bootstrap/gnome.sh
 ./Bootstrap/dotfiles.sh
 
 ./Scripts/validate-workstation.sh
