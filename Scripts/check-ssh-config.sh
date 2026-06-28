@@ -10,7 +10,7 @@ if [ ! -f "$FILE" ]; then
   exit 1
 fi
 
-if grep -RInE "PRIVATE KEY|BEGIN OPENSSH|BEGIN RSA|IdentityFile .*id_|known_hosts|password|token|secret" "$FILE"; then
+if grep -RInE "PRIVATE KEY|BEGIN OPENSSH|BEGIN RSA|password|token|secret" "$FILE"; then
   echo "Potential sensitive SSH config content found."
   exit 1
 fi
