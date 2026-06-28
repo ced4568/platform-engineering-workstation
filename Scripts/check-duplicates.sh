@@ -11,4 +11,8 @@ if [ -d "$HOME/Dev/GitHub/Synthos-Systems-AI-OS-Internal" ] && [ -d "$HOME/Dev/G
   echo "Duplicate found: Synthos-Systems-AI-OS-Internal exists in both ~/Dev/GitHub and ~/Dev/GitHub/ced4568"
 fi
 
+
+echo
+echo "Canonical GitHub repo path: $HOME/Dev/GitHub/ced4568"
 echo "== Duplicate check complete =="
+
