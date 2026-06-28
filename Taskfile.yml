@@ -85,3 +85,8 @@ tasks:
     desc: Audit managed dotfiles
     cmds:
       - ./Scripts/dotfiles-audit.sh
+
+  ssh:check:
+    desc: Check SSH config for public repo safety
+    cmds:
+      - ./Scripts/check-ssh-config.sh
