@@ -80,3 +80,8 @@ tasks:
     desc: Show workstation repository summary
     cmds:
       - ./Scripts/repo-summary.sh
+
+  dotfiles:audit:
+    desc: Audit managed dotfiles
+    cmds:
+      - ./Scripts/dotfiles-audit.sh
