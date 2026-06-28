@@ -1,0 +1,57 @@
+add_newline = true
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$docker_context\
+$kubernetes\
+$terraform\
+$python\
+$nodejs\
+$golang\
+$cmd_duration\
+$line_break\
+$character
+"""
+
+[username]
+show_always = true
+format = "[$user]($style) "
+style_user = "bold blue"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname]($style) "
+style = "bold green"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = "bold cyan"
+
+[git_branch]
+symbol = " "
+
+[git_status]
+style = "yellow"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](yellow) "
+
+[docker_context]
+symbol = " "
+
+[kubernetes]
+disabled = false
+symbol = "☸ "
+
+[terraform]
+symbol = "󱁢 "
