@@ -1,0 +1,6 @@
+[general]
+import = [
+  "~/.config/alacritty/themes/srcery-default.toml"
+]
+[font]
+size = 12.0
