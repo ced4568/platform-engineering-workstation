@@ -18,7 +18,7 @@ hostnamectl --static
 echo
 
 echo "== Core Commands =="
-for cmd in git gh docker kubectl helm k9s code alacritty starship eza batcat rg fdfind fzf zoxide fastfetch; do
+for cmd in git gh docker kubectl helm k9s code alacritty starship eza batcat rg fdfind fzf zoxide fastfetch task tofu sops age; do
   check_cmd "$cmd"
 done
 echo
