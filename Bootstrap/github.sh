@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "== GitHub =="
+echo "== GitHub CLI =="
 
-if gh auth status >/dev/null 2>&1; then
-    echo "Already authenticated."
-else
-    gh auth login
+if ! command -v gh >/dev/null; then
+    echo "GitHub CLI not installed."
+    exit 1
 fi
 
 gh auth status
 
 echo
-echo "== GitHub complete =="
+echo "Installed repositories:"
+gh repo list ced4568 --limit 10
+
+echo
+echo "GitHub bootstrap complete."
