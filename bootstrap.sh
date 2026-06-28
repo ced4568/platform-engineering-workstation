@@ -15,6 +15,7 @@ echo "========================================"
 ./Bootstrap/docker.sh
 ./Bootstrap/kubernetes.sh
 ./Bootstrap/github.sh
+./Bootstrap/vscode.sh
 ./Bootstrap/dotfiles.sh
 
 ./Scripts/validate-workstation.sh
