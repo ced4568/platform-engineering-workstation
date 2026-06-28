@@ -105,3 +105,8 @@ tasks:
     desc: Check DNS and GitHub connectivity
     cmds:
       - ./Scripts/check-network.sh
+
+  final:
+    desc: Run final workstation verification
+    cmds:
+      - ./Scripts/final-check.sh
