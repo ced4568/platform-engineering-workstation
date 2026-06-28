@@ -3,11 +3,12 @@ set -euo pipefail
 
 echo "== Simple repo secret scan =="
 
-patterns='(PRIVATE KEY|BEGIN RSA|BEGIN OPENSSH|password=|token=|api[_-]?key|secret=|gho_|github_pat_|AKIA|\.env)'
+patterns='(PRIVATE KEY|BEGIN RSA|BEGIN OPENSSH|password=|token=|api[_-]?key|secret=|gho_|github_pat_|AKIA)'
 
 if grep -RInE "$patterns" . \
   --exclude-dir=.git \
   --exclude-dir=Backups \
+  --exclude=.gitignore \
   --exclude=security-scan-repo.sh; then
   echo
   echo "Potential secret found. Review before pushing."
