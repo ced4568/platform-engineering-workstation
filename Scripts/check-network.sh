@@ -18,4 +18,4 @@ ping -c 2 github.com || true
 
 echo
 echo "HTTPS:"
-curl -I https://github.com --max-time 10 | head || true
+curl -Is https://github.com --max-time 10 | head || true
