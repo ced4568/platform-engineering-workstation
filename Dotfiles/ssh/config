@@ -1,0 +1,38 @@
+Host synthos01
+    HostName 148.251.90.246
+    User ced4568
+    IdentityFile ~/.ssh/id_ed25519
+
+Host synthos02
+    HostName 104.225.218.142
+    User ced4568
+    IdentityFile ~/.ssh/id_ed25519
+
+Host bigworld
+    HostName 10.10.30.250
+    User ced4568
+
+Host truenas
+    HostName 10.10.30.143
+
+Host npm
+    HostName 10.10.30.210
+
+Host loki
+    HostName 10.10.30.68
+# GitHub
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+
+# SynthOS Dedicated
+Host synthos01
+    HostName 148.251.90.246
+    User ced4568
+
+# SynthOS VPS
+Host synthos02
+    HostName 104.225.218.142
+    User ced4568
