@@ -13,6 +13,9 @@ echo
 task repos:duplicates
 echo
 
+task ssh:check
+echo
+
 task repos:status
 echo
 
