@@ -7,6 +7,9 @@ echo
 task security:scan
 echo
 
+task network:check
+echo
+
 task validate
 echo
 
