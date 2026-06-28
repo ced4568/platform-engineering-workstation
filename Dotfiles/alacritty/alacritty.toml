@@ -1,0 +1,39 @@
+[general]
+import = [
+  "~/.config/alacritty/themes/srcery-default.toml"
+]
+
+[window]
+padding = { x = 10, y = 10 }
+dynamic_padding = true
+opacity = 0.96
+
+[scrolling]
+history = 100000
+multiplier = 5
+
+[font]
+size = 12.5
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 500
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+
+[keyboard]
+bindings = [
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  { key = "Key0", mods = "Control", action = "ResetFontSize" },
+  { key = "PageUp", mods = "Shift", action = "ScrollPageUp" },
+  { key = "PageDown", mods = "Shift", action = "ScrollPageDown" },
+  { key = "Home", mods = "Shift", action = "ScrollToTop" },
+  { key = "End", mods = "Shift", action = "ScrollToBottom" }
+]
