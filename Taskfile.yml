@@ -95,3 +95,8 @@ tasks:
     desc: Show installed tool versions
     cmds:
       - ./Scripts/version-check.sh
+
+  sops:fix:
+    desc: Install or repair sops binary
+    cmds:
+      - ./Scripts/fix-sops.sh
