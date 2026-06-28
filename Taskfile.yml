@@ -70,3 +70,8 @@ tasks:
     desc: Check duplicate project directories
     cmds:
       - ./Scripts/check-duplicates.sh
+
+  health:
+    desc: Run full workstation health check
+    cmds:
+      - ./Scripts/health-check.sh
