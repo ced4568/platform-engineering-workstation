@@ -65,3 +65,8 @@ tasks:
     desc: Save live configs into repo
     cmds:
       - ./Scripts/save-live-configs.sh
+
+  repos:duplicates:
+    desc: Check duplicate project directories
+    cmds:
+      - ./Scripts/check-duplicates.sh
