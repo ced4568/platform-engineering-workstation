@@ -75,3 +75,8 @@ tasks:
     desc: Run full workstation health check
     cmds:
       - ./Scripts/health-check.sh
+
+  repo:summary:
+    desc: Show workstation repository summary
+    cmds:
+      - ./Scripts/repo-summary.sh
