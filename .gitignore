@@ -16,3 +16,6 @@ id_ed25519
 
 # OS
 Thumbs.db
+
+# Local generated backups
+Backups/
