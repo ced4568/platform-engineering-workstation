@@ -90,3 +90,8 @@ tasks:
     desc: Check SSH config for public repo safety
     cmds:
       - ./Scripts/check-ssh-config.sh
+
+  versions:
+    desc: Show installed tool versions
+    cmds:
+      - ./Scripts/version-check.sh
