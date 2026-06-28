@@ -37,3 +37,6 @@ eval "$(zoxide init bash)"
 
 # Starship Prompt
 eval "$(starship init bash)"
+
+# direnv
+eval "$(direnv hook bash)"
