@@ -100,3 +100,8 @@ tasks:
     desc: Install or repair sops binary
     cmds:
       - ./Scripts/fix-sops.sh
+
+  network:check:
+    desc: Check DNS and GitHub connectivity
+    cmds:
+      - ./Scripts/check-network.sh
