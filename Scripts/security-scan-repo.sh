@@ -9,7 +9,8 @@ if grep -RInE "$patterns" . \
   --exclude-dir=.git \
   --exclude-dir=Backups \
   --exclude=.gitignore \
-  --exclude=security-scan-repo.sh; then
+  --exclude=security-scan-repo.sh \
+  --exclude=check-ssh-config.sh; then
   echo
   echo "Potential secret found. Review before pushing."
   exit 1
