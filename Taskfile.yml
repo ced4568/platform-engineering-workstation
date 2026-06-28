@@ -1,0 +1,37 @@
+version: '3'
+
+tasks:
+  validate:
+    desc: Validate workstation tools and configuration
+    cmds:
+      - ./Scripts/validate-workstation.sh
+
+  update:
+    desc: Update packages and local repositories
+    cmds:
+      - ./Scripts/update-workstation.sh
+
+  repos:sync:
+    desc: Sync GitHub repositories
+    cmds:
+      - ./Scripts/sync-github-repos.sh
+
+  repos:status:
+    desc: Check all repos for local changes
+    cmds:
+      - ./Scripts/repo-status.sh
+
+  docker:clean:
+    desc: Clean Docker unused resources
+    cmds:
+      - ./Scripts/clean-docker.sh
+
+  info:
+    desc: Show workstation information
+    cmds:
+      - ./Scripts/workstation-info.sh
+
+  bootstrap:
+    desc: Run full workstation bootstrap
+    cmds:
+      - ./bootstrap.sh
