@@ -50,3 +50,13 @@ tasks:
     desc: Open common workstation projects
     cmds:
       - ./Scripts/open-workstation.sh
+
+  security:scan:
+    desc: Scan repo for obvious secrets
+    cmds:
+      - ./Scripts/security-scan-repo.sh
+
+  adr:note:
+    desc: Show private ADR reminder
+    cmds:
+      - ./Scripts/adr-note.sh
