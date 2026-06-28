@@ -6,23 +6,27 @@ echo " Platform Engineering Workstation Setup "
 echo "========================================"
 echo
 
-echo "[1/5] Installing packages..."
+echo "[1/6] Installing packages..."
 ./Bootstrap/packages.sh
 
 echo
-echo "[2/5] Dotfiles..."
-# ./Bootstrap/dotfiles.sh
+echo "[2/6] Configuring Git..."
+./Bootstrap/git.sh
 
 echo
-echo "[3/5] VS Code..."
-# ./Bootstrap/vscode.sh
+echo "[3/6] Configuring Bash..."
+./Bootstrap/bash.sh
 
 echo
-echo "[4/5] Docker..."
-# ./Bootstrap/docker.sh
+echo "[4/6] Configuring SSH..."
+./Bootstrap/ssh.sh
 
 echo
-echo "[5/5] Validation..."
+echo "[5/6] Configuring Docker..."
+./Bootstrap/docker.sh
+
+echo
+echo "[6/6] Validation..."
 ./Scripts/validate-workstation.sh
 
 echo
