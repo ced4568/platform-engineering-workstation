@@ -6,12 +6,16 @@ echo " Platform Engineering Workstation Setup "
 echo "========================================"
 
 ./Bootstrap/packages.sh
+./Bootstrap/fonts.sh
 ./Bootstrap/git.sh
+./Bootstrap/starship.sh
 ./Bootstrap/bash.sh
 ./Bootstrap/ssh.sh
+./Bootstrap/alacritty.sh
 ./Bootstrap/docker.sh
 ./Bootstrap/kubernetes.sh
 ./Bootstrap/github.sh
+./Bootstrap/dotfiles.sh
 
 ./Scripts/validate-workstation.sh
 
