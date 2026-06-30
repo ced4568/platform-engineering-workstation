@@ -20,4 +20,10 @@ fi
 docker --version
 docker compose version
 
+if docker info >/dev/null 2>&1; then
+  echo "Docker daemon is reachable."
+else
+  echo "Docker installed, but current shell may not have docker group access yet."
+fi
+
 echo "== Docker config complete =="
