@@ -1,0 +1,802 @@
+# Platform Engineer Intelligence Pack
+# Version: 1.0.0
+# Source of truth for Miniflux / RSS / YouTube / podcast / GitHub release feeds.
+# Place this file at: Resources/RSS/feeds.yaml
+
+metadata:
+  name: Platform Engineer Intelligence Pack
+  owner: Chase Dumphord
+  version: 1.0.0
+  description: Curated RSS intelligence sources for platform engineering, DevOps, cloud, AI, homelab, self-hosting, security, and infrastructure.
+  primary_reader: Miniflux
+
+categories:
+
+  - name: AI & LLMs
+    feeds:
+      - name: OpenAI News
+        type: rss
+        url: https://openai.com/news/rss.xml
+        website: https://openai.com/news
+        priority: high
+        tags: [ai, llm, openai]
+      - name: Anthropic News
+        type: rss
+        url: https://www.anthropic.com/news/rss.xml
+        website: https://www.anthropic.com/news
+        priority: high
+        tags: [ai, llm, claude]
+      - name: Hugging Face Blog
+        type: rss
+        url: https://huggingface.co/blog/feed.xml
+        website: https://huggingface.co/blog
+        priority: high
+        tags: [ai, machine-learning, open-source]
+      - name: Ollama Blog
+        type: rss
+        url: https://ollama.com/blog/rss.xml
+        website: https://ollama.com/blog
+        priority: high
+        tags: [ai, local-ai, llm]
+      - name: LangChain Blog
+        type: rss
+        url: https://blog.langchain.dev/rss/
+        website: https://blog.langchain.dev
+        priority: high
+        tags: [ai, agents, langchain]
+      - name: Weights & Biases
+        type: rss
+        url: https://wandb.ai/site/rss.xml
+        website: https://wandb.ai
+        priority: medium
+        tags: [mlops, ai, experiment-tracking]
+      - name: Mistral AI News
+        type: rss
+        url: https://mistral.ai/news/rss.xml
+        website: https://mistral.ai/news
+        priority: high
+        tags: [ai, llm, mistral]
+      - name: Cohere Blog
+        type: rss
+        url: https://cohere.com/blog/rss.xml
+        website: https://cohere.com/blog
+        priority: medium
+        tags: [ai, llm, cohere]
+      - name: Google DeepMind Blog
+        type: rss
+        url: https://deepmind.google/blog/rss.xml
+        website: https://deepmind.google/blog
+        priority: high
+        tags: [ai, research, deepmind]
+      - name: NVIDIA Technical Blog - AI
+        type: rss
+        url: https://developer.nvidia.com/blog/category/deep-learning/feed/
+        website: https://developer.nvidia.com/blog
+        priority: high
+        tags: [ai, gpu, nvidia]
+
+  - name: MLOps
+    feeds:
+      - name: MLflow Blog
+        type: rss
+        url: https://mlflow.org/blog/rss.xml
+        website: https://mlflow.org/blog
+        priority: high
+        tags: [mlops, mlflow]
+      - name: Kubeflow Blog
+        type: rss
+        url: https://blog.kubeflow.org/index.xml
+        website: https://blog.kubeflow.org
+        priority: high
+        tags: [mlops, kubernetes, kubeflow]
+      - name: Ray Blog
+        type: rss
+        url: https://www.anyscale.com/blog/rss.xml
+        website: https://www.anyscale.com/blog
+        priority: medium
+        tags: [mlops, ray]
+      - name: BentoML Blog
+        type: rss
+        url: https://www.bentoml.com/blog/rss.xml
+        website: https://www.bentoml.com/blog
+        priority: medium
+        tags: [mlops, model-serving]
+
+  - name: Platform Engineering
+    feeds:
+      - name: PlatformEngineering.org
+        type: rss
+        url: https://platformengineering.org/feed/
+        website: https://platformengineering.org
+        priority: high
+        tags: [platform-engineering, idp]
+      - name: Humanitec Blog
+        type: rss
+        url: https://humanitec.com/feed
+        website: https://humanitec.com/blog
+        priority: high
+        tags: [platform-engineering, idp]
+      - name: The New Stack
+        type: rss
+        url: https://thenewstack.io/feed/
+        website: https://thenewstack.io
+        priority: high
+        tags: [platform-engineering, cloud-native, devops]
+      - name: DevOps.com
+        type: rss
+        url: https://devops.com/feed/
+        website: https://devops.com
+        priority: medium
+        tags: [devops, platform-engineering]
+      - name: InfoQ DevOps
+        type: rss
+        url: https://feed.infoq.com/devops
+        website: https://www.infoq.com/devops/
+        priority: medium
+        tags: [devops, architecture]
+      - name: Martin Fowler
+        type: rss
+        url: https://martinfowler.com/feed.atom
+        website: https://martinfowler.com
+        priority: high
+        tags: [architecture, engineering]
+      - name: Thoughtworks Insights
+        type: rss
+        url: https://www.thoughtworks.com/rss/insights.xml
+        website: https://www.thoughtworks.com/insights
+        priority: medium
+        tags: [engineering, architecture]
+
+  - name: Kubernetes & Cloud Native
+    feeds:
+      - name: Kubernetes Blog
+        type: rss
+        url: https://kubernetes.io/feed.xml
+        website: https://kubernetes.io/blog
+        priority: high
+        tags: [kubernetes, cloud-native]
+      - name: CNCF Blog
+        type: rss
+        url: https://www.cncf.io/feed/
+        website: https://www.cncf.io/blog/
+        priority: high
+        tags: [cncf, cloud-native]
+      - name: Helm Blog
+        type: rss
+        url: https://helm.sh/blog/feed.xml
+        website: https://helm.sh/blog
+        priority: high
+        tags: [kubernetes, helm]
+      - name: Istio Blog
+        type: rss
+        url: https://istio.io/latest/feed.xml
+        website: https://istio.io/latest/blog/
+        priority: medium
+        tags: [kubernetes, service-mesh]
+      - name: Linkerd Blog
+        type: rss
+        url: https://linkerd.io/feed.xml
+        website: https://linkerd.io
+        priority: medium
+        tags: [kubernetes, service-mesh]
+      - name: KubeVirt Blog
+        type: rss
+        url: https://kubevirt.io/feed.xml
+        website: https://kubevirt.io
+        priority: medium
+        tags: [kubernetes, virtualization]
+      - name: Cilium Blog
+        type: rss
+        url: https://cilium.io/blog/index.xml
+        website: https://cilium.io/blog
+        priority: high
+        tags: [kubernetes, networking, ebpf]
+      - name: Rancher Blog
+        type: rss
+        url: https://www.suse.com/c/rancher_blog/feed/
+        website: https://www.suse.com/c/rancher_blog/
+        priority: medium
+        tags: [kubernetes, k3s, rancher]
+
+  - name: Linux
+    feeds:
+      - name: LWN
+        type: rss
+        url: https://lwn.net/headlines/rss
+        website: https://lwn.net
+        priority: high
+        tags: [linux, kernel]
+      - name: Phoronix
+        type: rss
+        url: https://www.phoronix.com/rss.php
+        website: https://www.phoronix.com
+        priority: high
+        tags: [linux, hardware]
+      - name: OMG Ubuntu
+        type: rss
+        url: https://www.omgubuntu.co.uk/feed
+        website: https://www.omgubuntu.co.uk
+        priority: medium
+        tags: [linux, ubuntu, desktop]
+      - name: Ubuntu Blog
+        type: rss
+        url: https://ubuntu.com/blog/feed
+        website: https://ubuntu.com/blog
+        priority: medium
+        tags: [linux, ubuntu]
+      - name: Fedora Magazine
+        type: rss
+        url: https://fedoramagazine.org/feed/
+        website: https://fedoramagazine.org
+        priority: medium
+        tags: [linux, fedora]
+      - name: Arch Linux News
+        type: rss
+        url: https://archlinux.org/feeds/news/
+        website: https://archlinux.org/news/
+        priority: medium
+        tags: [linux, arch]
+
+  - name: Cloud
+    feeds:
+      - name: AWS News Blog
+        type: rss
+        url: https://aws.amazon.com/blogs/aws/feed/
+        website: https://aws.amazon.com/blogs/aws/
+        priority: high
+        tags: [aws, cloud]
+      - name: AWS Containers Blog
+        type: rss
+        url: https://aws.amazon.com/blogs/containers/feed/
+        website: https://aws.amazon.com/blogs/containers/
+        priority: high
+        tags: [aws, containers, kubernetes]
+      - name: Azure Updates
+        type: rss
+        url: https://azure.microsoft.com/updates/feed/
+        website: https://azure.microsoft.com/updates/
+        priority: high
+        tags: [azure, cloud]
+      - name: Azure Architecture Blog
+        type: rss
+        url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/bg-p/AzureArchitectureBlog/rss
+        website: https://techcommunity.microsoft.com/t5/azure-architecture-blog/bg-p/AzureArchitectureBlog
+        priority: medium
+        tags: [azure, architecture]
+      - name: Google Cloud Blog
+        type: rss
+        url: https://cloud.google.com/blog/products/rss/
+        website: https://cloud.google.com/blog
+        priority: high
+        tags: [gcp, cloud]
+      - name: Cloudflare Blog
+        type: rss
+        url: https://blog.cloudflare.com/rss/
+        website: https://blog.cloudflare.com
+        priority: high
+        tags: [cloudflare, networking, security]
+      - name: DigitalOcean Blog
+        type: rss
+        url: https://www.digitalocean.com/blog/rss/
+        website: https://www.digitalocean.com/blog
+        priority: medium
+        tags: [cloud, vps]
+
+  - name: Observability
+    feeds:
+      - name: Grafana Labs Blog
+        type: rss
+        url: https://grafana.com/blog/rss/
+        website: https://grafana.com/blog
+        priority: high
+        tags: [grafana, observability]
+      - name: Prometheus Blog
+        type: rss
+        url: https://prometheus.io/blog/feed.xml
+        website: https://prometheus.io/blog/
+        priority: high
+        tags: [prometheus, monitoring]
+      - name: OpenTelemetry Blog
+        type: rss
+        url: https://opentelemetry.io/feed.xml
+        website: https://opentelemetry.io/blog/
+        priority: high
+        tags: [opentelemetry, observability]
+      - name: VictoriaMetrics Blog
+        type: rss
+        url: https://victoriametrics.com/blog/rss/
+        website: https://victoriametrics.com/blog/
+        priority: medium
+        tags: [observability, metrics]
+
+  - name: Containers
+    feeds:
+      - name: Docker Blog
+        type: rss
+        url: https://www.docker.com/blog/feed/
+        website: https://www.docker.com/blog/
+        priority: high
+        tags: [docker, containers]
+      - name: Podman Blog
+        type: rss
+        url: https://podman.io/feed.xml
+        website: https://podman.io
+        priority: medium
+        tags: [podman, containers]
+      - name: LinuxServer.io Blog
+        type: rss
+        url: https://www.linuxserver.io/blog.rss
+        website: https://www.linuxserver.io/blog
+        priority: high
+        tags: [docker, self-hosting]
+
+  - name: Infrastructure as Code
+    feeds:
+      - name: HashiCorp Blog
+        type: rss
+        url: https://www.hashicorp.com/blog/feed.xml
+        website: https://www.hashicorp.com/blog
+        priority: high
+        tags: [terraform, vault, infrastructure]
+      - name: OpenTofu Blog
+        type: rss
+        url: https://opentofu.org/feed.xml
+        website: https://opentofu.org/blog
+        priority: high
+        tags: [opentofu, terraform, iac]
+      - name: Pulumi Blog
+        type: rss
+        url: https://www.pulumi.com/blog/rss.xml
+        website: https://www.pulumi.com/blog/
+        priority: medium
+        tags: [iac, pulumi]
+      - name: Ansible Blog
+        type: rss
+        url: https://www.ansible.com/blog/rss.xml
+        website: https://www.ansible.com/blog
+        priority: medium
+        tags: [ansible, automation]
+
+  - name: Security
+    feeds:
+      - name: CISA Cybersecurity Advisories
+        type: rss
+        url: https://www.cisa.gov/cybersecurity-advisories/all.xml
+        website: https://www.cisa.gov/news-events/cybersecurity-advisories
+        priority: high
+        tags: [security, cisa, advisories]
+      - name: CISA Known Exploited Vulnerabilities
+        type: json-feed
+        url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+        website: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+        priority: high
+        tags: [security, vulnerabilities, kev]
+      - name: Krebs on Security
+        type: rss
+        url: https://krebsonsecurity.com/feed/
+        website: https://krebsonsecurity.com
+        priority: high
+        tags: [security, news]
+      - name: SANS Internet Storm Center
+        type: rss
+        url: https://isc.sans.edu/rssfeed.xml
+        website: https://isc.sans.edu
+        priority: high
+        tags: [security, threat-intel]
+      - name: CrowdSec Blog
+        type: rss
+        url: https://www.crowdsec.net/blog/rss.xml
+        website: https://www.crowdsec.net/blog
+        priority: medium
+        tags: [crowdsec, security]
+      - name: Google Project Zero
+        type: rss
+        url: https://googleprojectzero.blogspot.com/feeds/posts/default
+        website: https://googleprojectzero.blogspot.com
+        priority: high
+        tags: [security, research]
+      - name: Microsoft Security Response Center
+        type: rss
+        url: https://msrc.microsoft.com/blog/feed
+        website: https://msrc.microsoft.com/blog
+        priority: high
+        tags: [security, microsoft]
+
+  - name: Networking
+    feeds:
+      - name: Tailscale Blog
+        type: rss
+        url: https://tailscale.com/blog/index.xml
+        website: https://tailscale.com/blog
+        priority: high
+        tags: [tailscale, vpn, networking]
+      - name: Caddy Blog
+        type: rss
+        url: https://caddyserver.com/feed.xml
+        website: https://caddyserver.com/blog
+        priority: medium
+        tags: [reverse-proxy, caddy]
+      - name: Traefik Blog
+        type: rss
+        url: https://traefik.io/feed.xml
+        website: https://traefik.io/blog/
+        priority: medium
+        tags: [reverse-proxy, traefik]
+      - name: NGINX Blog
+        type: rss
+        url: https://www.nginx.com/blog/feed/
+        website: https://www.nginx.com/blog/
+        priority: medium
+        tags: [nginx, reverse-proxy]
+      - name: HAProxy Blog
+        type: rss
+        url: https://www.haproxy.com/blog/rss.xml
+        website: https://www.haproxy.com/blog
+        priority: medium
+        tags: [haproxy, load-balancing]
+
+  - name: Self-Hosting
+    feeds:
+      - name: selfh.st
+        type: rss
+        url: https://selfh.st/rss/
+        website: https://selfh.st
+        priority: high
+        tags: [self-hosting, homelab]
+      - name: VirtualizationHowTo
+        type: rss
+        url: https://www.virtualizationhowto.com/feed/
+        website: https://www.virtualizationhowto.com
+        priority: high
+        tags: [self-hosting, virtualization, homelab]
+      - name: KitPro Wiki
+        type: website
+        url: https://wiki.kitpro.us/
+        website: https://wiki.kitpro.us/
+        priority: high
+        tags: [self-hosting, homelab, wiki]
+        notes: Verify RSS availability. If no native RSS exists, track manually or create a feed with a feed-generation service.
+      - name: Awesome Selfhosted Releases
+        type: github-releases
+        url: https://github.com/awesome-selfhosted/awesome-selfhosted/releases.atom
+        website: https://github.com/awesome-selfhosted/awesome-selfhosted
+        priority: medium
+        tags: [self-hosting, awesome-list]
+      - name: Home Assistant Blog
+        type: rss
+        url: https://www.home-assistant.io/atom.xml
+        website: https://www.home-assistant.io/blog/
+        priority: high
+        tags: [home-assistant, self-hosting]
+      - name: Miniflux Releases
+        type: github-releases
+        url: https://github.com/miniflux/v2/releases.atom
+        website: https://github.com/miniflux/v2
+        priority: high
+        tags: [miniflux, rss, self-hosting]
+      - name: Jellyfin Blog
+        type: rss
+        url: https://jellyfin.org/index.xml
+        website: https://jellyfin.org
+        priority: medium
+        tags: [media, self-hosting]
+      - name: n8n Blog
+        type: rss
+        url: https://blog.n8n.io/rss/
+        website: https://blog.n8n.io
+        priority: high
+        tags: [automation, self-hosting]
+
+  - name: Virtualization & Homelab
+    feeds:
+      - name: Proxmox RSS
+        type: rss
+        url: https://www.proxmox.com/en/rss
+        website: https://www.proxmox.com/en/news
+        priority: high
+        tags: [proxmox, virtualization]
+      - name: TrueNAS Blog
+        type: rss
+        url: https://www.truenas.com/blog/feed/
+        website: https://www.truenas.com/blog/
+        priority: high
+        tags: [truenas, storage]
+      - name: OpenZFS News
+        type: rss
+        url: https://openzfs.org/w/index.php?title=News&feed=atom
+        website: https://openzfs.org
+        priority: medium
+        tags: [zfs, storage]
+      - name: Jeff Geerling Blog
+        type: rss
+        url: https://www.jeffgeerling.com/blog.xml
+        website: https://www.jeffgeerling.com
+        priority: high
+        tags: [homelab, raspberry-pi]
+      - name: ServeTheHome
+        type: rss
+        url: https://www.servethehome.com/feed/
+        website: https://www.servethehome.com
+        priority: high
+        tags: [hardware, homelab, servers]
+      - name: StorageReview
+        type: rss
+        url: https://www.storagereview.com/feed
+        website: https://www.storagereview.com
+        priority: medium
+        tags: [storage, hardware]
+
+  - name: Databases
+    feeds:
+      - name: PostgreSQL News
+        type: rss
+        url: https://www.postgresql.org/news.rss
+        website: https://www.postgresql.org/about/news/
+        priority: high
+        tags: [postgresql, database]
+      - name: Redis Blog
+        type: rss
+        url: https://redis.io/blog/rss/
+        website: https://redis.io/blog/
+        priority: medium
+        tags: [redis, database]
+      - name: MariaDB Blog
+        type: rss
+        url: https://mariadb.com/resources/blog/feed/
+        website: https://mariadb.com/resources/blog/
+        priority: medium
+        tags: [mariadb, database]
+
+  - name: Programming
+    feeds:
+      - name: Go Blog
+        type: rss
+        url: https://go.dev/blog/feed.atom
+        website: https://go.dev/blog
+        priority: high
+        tags: [go, programming]
+      - name: Python Software Foundation
+        type: rss
+        url: https://pyfound.blogspot.com/feeds/posts/default
+        website: https://pyfound.blogspot.com
+        priority: medium
+        tags: [python, programming]
+      - name: Rust Blog
+        type: rss
+        url: https://blog.rust-lang.org/feed.xml
+        website: https://blog.rust-lang.org
+        priority: medium
+        tags: [rust, programming]
+      - name: GitHub Blog
+        type: rss
+        url: https://github.blog/feed/
+        website: https://github.blog
+        priority: high
+        tags: [github, devtools]
+      - name: GitLab Blog
+        type: rss
+        url: https://about.gitlab.com/atom.xml
+        website: https://about.gitlab.com/blog/
+        priority: medium
+        tags: [gitlab, devtools]
+
+  - name: YouTube
+    feeds:
+      - name: Techno Tim
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ
+        website: https://www.youtube.com/@TechnoTim
+        priority: high
+        tags: [homelab, kubernetes, self-hosting]
+      - name: Christian Lempa
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZNhwA1B5YqiY1nLzmM0ZRg
+        website: https://www.youtube.com/@christianlempa
+        priority: high
+        tags: [devops, homelab, containers]
+      - name: Learn Linux TV
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UCxQKHvKbmSzGMvUrVtJYnUA
+        website: https://www.youtube.com/@LearnLinuxTV
+        priority: high
+        tags: [linux, sysadmin]
+      - name: Jeff Geerling
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UCR-DXc1voovS8nhAvccRZhg
+        website: https://www.youtube.com/@JeffGeerling
+        priority: high
+        tags: [homelab, hardware, raspberry-pi]
+      - name: NetworkChuck
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UC9x0AN7BWHpCDHSm9NiJFJQ
+        website: https://www.youtube.com/@NetworkChuck
+        priority: medium
+        tags: [networking, linux, security]
+      - name: TechWorld with Nana
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UCdngmbVKX1Tgre699-XLlUA
+        website: https://www.youtube.com/@TechWorldwithNana
+        priority: high
+        tags: [kubernetes, devops, cloud]
+      - name: Mischa van den Burg / KubeCraft
+        type: youtube
+        url: https://www.youtube.com/@mischavandenburg
+        website: https://www.youtube.com/@mischavandenburg
+        priority: high
+        tags: [devops, kubernetes, platform-engineering]
+        notes: Convert handle URL to YouTube RSS channel_id when available.
+      - name: The Next Big Thing AI
+        type: youtube
+        url: https://www.youtube.com/@TheNextNewThingAI
+        website: https://www.youtube.com/@TheNextNewThingAI
+        priority: high
+        tags: [ai, llm, youtube]
+        notes: Convert handle URL to YouTube RSS channel_id when available.
+      - name: Fireship
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA
+        website: https://www.youtube.com/@Fireship
+        priority: medium
+        tags: [programming, devtools, ai]
+      - name: IBM Technology
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UCBR6sHCP1P8sBC5qH4IeE5g
+        website: https://www.youtube.com/@IBMTechnology
+        priority: medium
+        tags: [ai, cloud, technology]
+      - name: Two Minute Papers
+        type: youtube
+        url: https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg
+        website: https://www.youtube.com/@TwoMinutePapers
+        priority: medium
+        tags: [ai, research]
+
+  - name: Podcasts
+    feeds:
+      - name: Self-Hosted
+        type: podcast
+        url: https://feeds.fireside.fm/selfhosted/rss
+        website: https://selfhosted.show
+        priority: high
+        tags: [self-hosting, homelab]
+      - name: Kubernetes Podcast
+        type: podcast
+        url: https://kubernetespodcast.com/episodes/feed.xml
+        website: https://kubernetespodcast.com
+        priority: high
+        tags: [kubernetes, cloud-native]
+      - name: Changelog
+        type: podcast
+        url: https://changelog.com/podcast/feed
+        website: https://changelog.com/podcast
+        priority: medium
+        tags: [software-engineering, open-source]
+      - name: Linux Unplugged
+        type: podcast
+        url: https://feeds.jupiterbroadcasting.com/linux-unplugged
+        website: https://linuxunplugged.com
+        priority: medium
+        tags: [linux, open-source]
+
+  - name: GitHub Releases
+    feeds:
+      - name: Kubernetes Releases
+        type: github-releases
+        url: https://github.com/kubernetes/kubernetes/releases.atom
+        website: https://github.com/kubernetes/kubernetes
+        priority: high
+        tags: [kubernetes, releases]
+      - name: K3s Releases
+        type: github-releases
+        url: https://github.com/k3s-io/k3s/releases.atom
+        website: https://github.com/k3s-io/k3s
+        priority: high
+        tags: [k3s, kubernetes, releases]
+      - name: Grafana Releases
+        type: github-releases
+        url: https://github.com/grafana/grafana/releases.atom
+        website: https://github.com/grafana/grafana
+        priority: high
+        tags: [grafana, observability, releases]
+      - name: Loki Releases
+        type: github-releases
+        url: https://github.com/grafana/loki/releases.atom
+        website: https://github.com/grafana/loki
+        priority: high
+        tags: [loki, observability, releases]
+      - name: Prometheus Releases
+        type: github-releases
+        url: https://github.com/prometheus/prometheus/releases.atom
+        website: https://github.com/prometheus/prometheus
+        priority: high
+        tags: [prometheus, monitoring, releases]
+      - name: OpenTelemetry Collector Releases
+        type: github-releases
+        url: https://github.com/open-telemetry/opentelemetry-collector/releases.atom
+        website: https://github.com/open-telemetry/opentelemetry-collector
+        priority: high
+        tags: [opentelemetry, releases]
+      - name: Cilium Releases
+        type: github-releases
+        url: https://github.com/cilium/cilium/releases.atom
+        website: https://github.com/cilium/cilium
+        priority: high
+        tags: [cilium, networking, releases]
+      - name: Argo CD Releases
+        type: github-releases
+        url: https://github.com/argoproj/argo-cd/releases.atom
+        website: https://github.com/argoproj/argo-cd
+        priority: high
+        tags: [gitops, kubernetes, releases]
+      - name: Flux Releases
+        type: github-releases
+        url: https://github.com/fluxcd/flux2/releases.atom
+        website: https://github.com/fluxcd/flux2
+        priority: medium
+        tags: [gitops, kubernetes, releases]
+      - name: Traefik Releases
+        type: github-releases
+        url: https://github.com/traefik/traefik/releases.atom
+        website: https://github.com/traefik/traefik
+        priority: medium
+        tags: [reverse-proxy, releases]
+      - name: Caddy Releases
+        type: github-releases
+        url: https://github.com/caddyserver/caddy/releases.atom
+        website: https://github.com/caddyserver/caddy
+        priority: medium
+        tags: [reverse-proxy, releases]
+      - name: Home Assistant Releases
+        type: github-releases
+        url: https://github.com/home-assistant/core/releases.atom
+        website: https://github.com/home-assistant/core
+        priority: medium
+        tags: [home-assistant, releases]
+      - name: Immich Releases
+        type: github-releases
+        url: https://github.com/immich-app/immich/releases.atom
+        website: https://github.com/immich-app/immich
+        priority: medium
+        tags: [self-hosting, photos, releases]
+      - name: Authentik Releases
+        type: github-releases
+        url: https://github.com/goauthentik/authentik/releases.atom
+        website: https://github.com/goauthentik/authentik
+        priority: medium
+        tags: [identity, self-hosting, releases]
+      - name: Gitea Releases
+        type: github-releases
+        url: https://github.com/go-gitea/gitea/releases.atom
+        website: https://github.com/go-gitea/gitea
+        priority: medium
+        tags: [git, self-hosting, releases]
+      - name: Forgejo Releases
+        type: github-releases
+        url: https://codeberg.org/forgejo/forgejo/releases.rss
+        website: https://codeberg.org/forgejo/forgejo
+        priority: medium
+        tags: [git, self-hosting, releases]
+      - name: CrowdSec Releases
+        type: github-releases
+        url: https://github.com/crowdsecurity/crowdsec/releases.atom
+        website: https://github.com/crowdsecurity/crowdsec
+        priority: medium
+        tags: [security, releases]
+      - name: Ollama Releases
+        type: github-releases
+        url: https://github.com/ollama/ollama/releases.atom
+        website: https://github.com/ollama/ollama
+        priority: high
+        tags: [ai, local-ai, releases]
+      - name: Open WebUI Releases
+        type: github-releases
+        url: https://github.com/open-webui/open-webui/releases.atom
+        website: https://github.com/open-webui/open-webui
+        priority: high
+        tags: [ai, self-hosting, releases]
+      - name: n8n Releases
+        type: github-releases
+        url: https://github.com/n8n-io/n8n/releases.atom
+        website: https://github.com/n8n-io/n8n
+        priority: medium
+        tags: [automation, releases]
