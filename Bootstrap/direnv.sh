@@ -15,5 +15,5 @@ eval "$(direnv hook bash)"
 BASH_EOF
 fi
 
-echo "== direnv complete =="
 direnv version
+echo "== direnv complete =="

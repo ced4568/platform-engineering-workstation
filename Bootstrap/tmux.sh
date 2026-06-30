@@ -9,5 +9,5 @@ fi
 
 cp "$HOME/Dev/GitHub/ced4568/platform-engineering-workstation/Dotfiles/tmux/tmux.conf" "$HOME/.tmux.conf"
 
-echo "== tmux complete =="
 tmux -V
+echo "== tmux complete =="
