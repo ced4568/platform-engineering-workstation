@@ -8,6 +8,6 @@ if ! command -v code >/dev/null 2>&1; then
   exit 0
 fi
 
-"$HOME/Dev/GitHub/ced4568/platform-engineering-workstation/Bootstrap/vscode-extensions.sh"
+"$HOME/Dev/GitHub/ced4568/platform-engineering-workstation/Bootstrap/common/vscode-extensions.sh"
 
 echo "== VS Code complete =="
