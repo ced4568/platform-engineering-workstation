@@ -4,7 +4,9 @@ set -euo pipefail
 echo "== GitHub CLI =="
 
 if ! command -v gh >/dev/null 2>&1; then
-  sudo nala install -y gh
+  echo "GitHub CLI is not installed."
+  echo "Run the distribution package bootstrap before this module."
+  exit 1
 fi
 
 if gh auth status >/dev/null 2>&1; then

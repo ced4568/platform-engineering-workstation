@@ -1,24 +1,51 @@
 # --- Platform Engineering Workstation ---
+
 export HISTSIZE=50000
 export HISTFILESIZE=100000
 export HISTCONTROL=ignoreboth:erasedups
+
 shopt -s histappend
 shopt -s checkwinsize
-
-# PATH
-export PATH="$HOME/.local/bin:$PATH"
 
 # Better defaults
 alias ll='eza -lah --icons --group-directories-first'
 alias la='eza -la --icons --group-directories-first'
 alias ls='eza --icons --group-directories-first'
-alias cat='batcat'
 alias grep='grep --color=auto'
-alias fd='fdfind'
 alias ports='ss -tulpen'
 alias myip='hostname -I'
-alias update='sudo nala update && sudo nala upgrade'
 alias please='sudo'
+
+# Distribution-aware commands
+if command -v bat >/dev/null 2>&1; then
+  alias cat='bat'
+elif command -v batcat >/dev/null 2>&1; then
+  alias cat='batcat'
+fi
+
+if command -v fd >/dev/null 2>&1; then
+  alias fd='fd'
+elif command -v fdfind >/dev/null 2>&1; then
+  alias fd='fdfind'
+fi
+
+if [ -r /etc/os-release ]; then
+  . /etc/os-release
+
+  case "${ID:-unknown}" in
+    ubuntu|debian)
+      if command -v nala >/dev/null 2>&1; then
+        alias update='sudo nala update && sudo nala upgrade'
+      else
+        alias update='sudo apt update && sudo apt upgrade'
+      fi
+      ;;
+
+    fedora)
+      alias update='sudo dnf upgrade --refresh'
+      ;;
+  esac
+fi
 
 # Navigation
 alias dev='cd ~/Dev'
@@ -32,11 +59,11 @@ alias gc='git commit'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate --all'
 
-# zoxide
-eval "$(zoxide init bash)"
+# Optional tools
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init bash)"
+fi
 
-# Starship Prompt
-eval "$(starship init bash)"
-
-# direnv
-eval "$(direnv hook bash)"
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init bash)"
+fi
