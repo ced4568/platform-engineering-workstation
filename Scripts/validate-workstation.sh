@@ -119,7 +119,9 @@ echo
 
 echo "== GitHub SSH =="
 
-if ssh -T git@github.com 2>&1 | grep -q "successfully authenticated"; then
+github_ssh_output="$(ssh -T git@github.com 2>&1 || true)"
+
+if grep -q "successfully authenticated" <<< "$github_ssh_output"; then
   echo "✅ GitHub SSH authentication succeeded"
 else
   echo "⚠️  GitHub SSH authentication did not succeed."
