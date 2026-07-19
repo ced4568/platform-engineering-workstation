@@ -1,0 +1,104 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+VERSION="2.0.0-dev"
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+source "$ROOT_DIR/lib/common.sh"
+source "$ROOT_DIR/lib/logger.sh"
+source "$ROOT_DIR/lib/module_loader.sh"
+source "$ROOT_DIR/lib/profile.sh"
+
+load_modules
+
+usage() {
+cat <<EOF
+
+Platform Bootstrap v${VERSION}
+
+Usage:
+
+  platform-bootstrap install
+  platform-bootstrap validate
+  platform-bootstrap repair
+  platform-bootstrap report
+  platform-bootstrap doctor
+  platform-bootstrap secrets pull
+  platform-bootstrap secrets push
+  platform-bootstrap profile list
+  platform-bootstrap profile apply <profile>
+  platform-bootstrap version
+  platform-bootstrap help
+
+EOF
+}
+
+case "${1:-help}" in
+
+    install)
+        log_info "Starting installation..."
+        ;;
+
+    validate)
+        validate_system
+        ;;
+
+    repair)
+        log_info "Running repair..."
+        ;;
+
+    report)
+        log_info "Generating report..."
+        ;;
+
+    doctor)
+        log_info "Running diagnostics..."
+        ;;
+
+    secrets)
+        case "${2:-}" in
+            pull)
+                log_info "Pulling secrets..."
+                ;;
+            push)
+                log_info "Pushing secrets..."
+                ;;
+            *)
+                usage
+                exit 1
+                ;;
+        esac
+        ;;
+
+    profile)
+        case "${2:-}" in
+            list)
+                list_profiles
+                ;;
+            apply)
+                apply_profile "${3:-}"
+                ;;
+            *)
+                usage
+                exit 1
+                ;;
+        esac
+        ;;
+
+    version)
+        echo "$VERSION"
+        ;;
+
+    help|-h|--help)
+        usage
+        ;;
+
+    *)
+        echo "Unknown command: $1"
+        usage
+        exit 1
+        ;;
+
+esac
