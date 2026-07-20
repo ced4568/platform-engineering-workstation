@@ -42,7 +42,7 @@ case "${1:-help}" in
         ;;
 
     validate)
-        validate_system
+        validate_system "${2:-fedora-workstation}"
         ;;
 
     repair)
